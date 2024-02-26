@@ -1,0 +1,33 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Update Custom Object Form | Integrating With HubSpot I Practicum
+
+        .form-wrapper
+
+            p Name: 
+            p Type:
+            p Preferred Food:
+
+            form(method='POST')
+
+                //- input name
+                input(type="text" name="name" placeholder="Name")
+                
+                //- input type
+                input(type="text" name="type" placeholder="Type")
+
+                //- input preferred_food (dropdown)
+                select(name="preferred_food")
+                    option(value="bone") Bone
+                    option(value="steak") Steak
+                    option(value="fish") Fish
+
+                //- submit button
+                input(type="submit" value="Submit")
+                
+        a(href="/") Return to the homepage
